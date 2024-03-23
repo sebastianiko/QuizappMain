@@ -52,4 +52,18 @@ function showCurrentQuestion() {
     document.getElementById("answer4").innerHTML = question["answer4"];
 }
 
-function answer(id) {}
+function answer(id) {
+    let question = questions[currentQuestion];
+    console.log("Selected answer is", id);
+    let selectedQuestionNumber = id.slice(-1);
+    console.log("selectedQuestionNumber is", selectedQuestionNumber);
+    console.log("Current question is", question["rightAnswer"]);
+
+    if (selectedQuestionNumber == question["rightAnswer"]) {
+        console.log("richtige Antwort");
+        document.getElementById(id).parentNode.classList.add("bg-success");
+    } else {
+        console.log("falsche Antwort");
+        document.getElementById(id).parentNode.classList.add("bg-danger");
+    }
+}
