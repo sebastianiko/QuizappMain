@@ -31,3 +31,22 @@ body {
 .bg-danger {
     color: white !important;
 }
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.final-text {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}

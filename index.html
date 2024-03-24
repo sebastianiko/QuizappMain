@@ -13,13 +13,25 @@
     <body onload="init()">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Navbar</span>
+                <span class="navbar-brand mb-0 h1">Quizapp</span>
             </div>
         </nav>
         <div class="container">
             <div class="quiz-card card">
-                <img src="/img/pencil.jpg" class="card-img-top" />
-                <div class="card-body">
+                <img src="img/pencil.jpg" class="card-img-top" id="headerImage" />
+
+                <div class="progress" role="progressbar" aria-label="Example with label">
+                    <div class="progress-bar" id="progress-bar" style="width: 0%">25%</div>
+                </div>
+
+                <div class="card-body" id="endScreen" style="display: none">
+                    <div class="text-center final-text">Quiz beendet!</div>
+                    <div class="text-center">Du hast <b id="numberRightQuestions">XXX</b> Fragen von <b id="allQuestionsAnswered">XXX</b> Fragen richtig beantwortet</div>
+
+                    <div class="button-row"><button type="button" class="btn btn-primary" onclick="restartGame()">Spiel wiederholen</button></div>
+                </div>
+
+                <div class="card-body" id="questionBody">
                     <h5 class="card-title" id="currentQuestion">Frage</h5>
 
                     <div class="card mb-2 quiz-answer-card" onclick="answer('answer1')">
@@ -38,8 +50,8 @@
                         <div class="card-body" id="answer4">Antwort</div>
                     </div>
                     <div class="question-footer">
-                        <span> <b id="actuallQuestion">1</b>von <b id="allQuestions">5</b> Fragen </span>
-                        <span><button type="button" class="btn btn-primary" id="nextButton" disabled onclick="nextQuestion()">Nächste Frage</button> </span>
+                        <span> <b id="actuallQuestion">1</b>von <b id="allQuestions">XXX</b> Fragen </span>
+                        <span><button type="button" class="btn btn-primary" id="nextButton" disabled onclick="nextQuestion()">Nächste Frage</button></span>
                     </div>
                 </div>
             </div>
